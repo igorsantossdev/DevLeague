@@ -1,2 +1,2 @@
-# startup-semanatecnica
-Start up que será apresentada na semana técnica em 2024
+# START UP - SEMANA TÉCNICA
+ Este projeto é um game projetado para ensinar conceitos de lógica de programação de forma divertida e envolvente, usando o contexto de um jogo de futebol

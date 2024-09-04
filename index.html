@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Movimento</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="campo-delimitado">
+        <div class="cell-a1"></div>
+        <div class="cell-a2"></div>
+        <div class="cell-a3"></div>
+        <div class="cell-a4"></div>
+        <div class="cell-a5"></div>
+
+        <div class="cell-b1"></div>
+        <div class="cell-b2"></div>
+        <div class="cell-b3"></div>
+        <div class="cell-b4"></div>
+        <div class="cell-b5"></div>
+
+        <div class="cell-c1"></div>
+        <div class="cell-c2"></div>
+        <div class="cell-c3"></div>
+        <div class="cell-c4"></div>
+        <div class="cell-c5"></div>
+
+        <div class="cell-d1"></div>
+        <div class="cell-d2"></div>
+        <div class="cell-d3"></div>
+        <div class="cell-d4"></div>
+        <div class="cell-d5"></div>
+
+        <div class="cell-e1"></div>
+        <div class="cell-e2"></div>
+        <div class="cell-e3"></div>
+        <div class="cell-e4"></div>
+        <div class="cell-e5"></div>
+
+        <!-- Jogador inicial na célula central (c3) -->
+        <div id="jogador"></div>
+    </div>
+
+    <!-- Botões de controle -->
+    <div id="controles">
+        <button onclick="moverCima()">Cima</button>
+        <button onclick="moverEsquerda()">Esquerda</button>
+        <button onclick="moverDireita()">Direita</button>
+        <button onclick="moverBaixo()">Baixo</button>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

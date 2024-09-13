@@ -1,3 +1,22 @@
+document.getElementById('start-game').addEventListener('click', () => {
+    showPhase(1);
+});
+
+function showPhase(phaseNumber) {
+    document.querySelectorAll('.view').forEach(view => view.style.display = 'none');
+    document.getElementById(`phase${phaseNumber}`).style.display = 'block';
+}
+
+function showHome() {
+    document.querySelectorAll('.view').forEach(view => view.style.display = 'none');
+    document.getElementById('home').style.display = 'block';
+}
+
+// Inicializa mostrando a página inicial
+showHome();
+
+// CÓDIGO DO CAMPO - FASE 1
+
 let linhaAtual = 1;
 let colunaAtual = 1;
 

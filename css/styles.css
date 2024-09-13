@@ -1,3 +1,4 @@
+/* Estilos gerais para o body */
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +7,48 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
+
+/* Container principal da aplicação */
+#app {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para o título do jogo */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Estilo para os botões de fase */
+#phase-buttons button {
+    background-color: #007BFF;
+}
+
+#phase-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Ocultar as fases que não estão ativas */
+.view {
+    display: none;
+}
+
+/* CSS DO CAMPO - FASE 1 */
 
 #container {
     display: flex;
@@ -88,3 +130,4 @@ body {
     top: 0;
     left: 0;
 }
+

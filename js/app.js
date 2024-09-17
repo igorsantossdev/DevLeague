@@ -1,3 +1,4 @@
+// ESTRUTURA DE SESSÕES 
 document.getElementById('start-game').addEventListener('click', () => {
     showPhase(1);
 });
@@ -15,8 +16,7 @@ function showHome() {
 // Inicializa mostrando a página inicial
 showHome();
 
-// CÓDIGO DO CAMPO - FASE 1
-
+// MECÂNICA DO JOGO 
 let linhaAtual = 1;
 let colunaAtual = 1;
 

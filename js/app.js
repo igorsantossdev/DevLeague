@@ -92,5 +92,13 @@ function reiniciarPosicao() {
     atualizarPosicao();
 }
 
+function chegouNoFinal() {
+    if (jogador.style.top == '150px' && jogador.style.left == '150px') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // Inicializar a posição inicial do jogador
 atualizarPosicao();

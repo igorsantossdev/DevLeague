@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#comandos {
+    width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px; /* Tamanho fixo para a área de comandos */
+    display: flex;
+    flex-direction: column;
+}
+
+#comandos h2 {
+    font-size: 24px;
+}
+
+#codigo {
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    white-space: pre-wrap; /* Para quebrar linhas */
+    overflow-y: scroll; /* Para permitir rolagem vertical */
+    resize: none; /* Impede o redimensionamento da área de comandos */
+}
+
+#play, #clear, #reiniciar, #voltar {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+#botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+#campo-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#campo-delimitado {
+    width: 600px;
+    height: 600px;
+    background-color: #4CAF50;
+    border: 2px solid #000;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    position: relative;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+}
+
+#jogador {
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    transition: top 0.3s, left 0.3s;
+    top: 0;
+    left: 0;
+}

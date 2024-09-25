@@ -44,6 +44,7 @@ function move(direction) {
     switch (direction) {
         case 'up':
             if (y > 0) y -= step;
+            
             break;
         case 'down':
             if (y < 270) y += step;

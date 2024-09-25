@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <body>
+        <!-- Modal de boas-vindas -->
+        <div id="welcome-modal" class="modal">
+            <div class="modal-content">
+                <h2>Bem-vindo à Fase 1</h2>
+                <p>Nesta fase, você aprenderá a mover o personagem utilizando os seguintes comandos:</p>
+                <ul>
+                    <li><b>moveForward()</b> - Move o personagem para cima.</li>
+                    <li><b>moveDown()</b> - Move o personagem para baixo.</li>
+                    <li><b>moveLeft()</b> - Move o personagem para a esquerda.</li>
+                    <li><b>moveRight()</b> - Move o personagem para a direita.</li>
+                </ul>
+                <button id="start-button">Começar</button>
+            </div>
+        </div>
+        
+        <div id="game-area">
+            <div id="ball"></div> <!-- Posição inicial da bola -->
+            <div id="target" class="target-area"></div> <!-- Área de destino maior -->
+        </div>
+        <div id="info">
+            <div id="min-movements">Movimentos Mínimos: -</div>
+            <div id="current-command">Comando Atual: -</div>
+            <div id="score">Nota: -</div>
+        </div>
+        <br>
+        <button onclick="addCommand('up')">Mover para Cima</button>
+        <button onclick="addCommand('left')">Mover para Esquerda</button>
+        <button onclick="addCommand('right')">Mover para Direita</button>
+        <button onclick="addCommand('down')">Mover para Baixo</button>
+        <button onclick="executeCommands()">Executar Movimentos</button>
+        <button><a href="index.html">voltar ao menu</a></button>
+        <div id="commands"></div>
+        <script src="/js/game.js"></script>
+    </body> 
+    <script src="script1.js"></script>
+</body>
+</html>
+
+</html>

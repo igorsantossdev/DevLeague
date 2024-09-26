@@ -39,26 +39,32 @@ function executeCommands() {
         }, index * 300); // Executa cada comando com um intervalo de 300ms
     });
 }
-
 function move(direction) {
+    const ball = document.getElementById('ball');
     switch (direction) {
         case 'up':
             if (y > 0) y -= step;
-            
+            ball.src = "costas.png"; // Muda a imagem para "c.jpg" quando move para cima
             break;
         case 'down':
             if (y < 270) y += step;
+            ball.src = "frente.png"; // Muda a imagem para "b.jpg" quando move para baixo
             break;
         case 'left':
             if (x > 0) x -= step;
+            ball.src = "esquerda.png"; // Muda a imagem para "e.jpg" quando move para esquerda
             break;
         case 'right':
             if (x < 270) x += step;
+            ball.src = "direita.png"; // Muda a imagem para "d.jpg" quando move para direita
+
+
             break;
     }
     updatePosition();
     moveCount++;
 }
+
 
 function updatePosition() {
     const ball = document.getElementById('ball');

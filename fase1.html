@@ -8,44 +8,57 @@
 </head>
 
 <body>
-    <body>
-        <!-- Modal de boas-vindas -->
-        <div id="welcome-modal" class="modal">
-            <div class="modal-content">
-                <h2>Bem-vindo à Fase 1</h2>
-                <p>Nesta fase, você aprenderá a mover o personagem utilizando os seguintes comandos:</p>
-                <ul>
-                    <li><b>moveForward()</b> - Move o personagem para cima.</li>
-                    <li><b>moveDown()</b> - Move o personagem para baixo.</li>
-                    <li><b>moveLeft()</b> - Move o personagem para a esquerda.</li>
-                    <li><b>moveRight()</b> - Move o personagem para a direita.</li>
-                </ul>
-                <button id="start-button">Começar</button>
+    <!-- Modal de boas-vindas -->
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <h2>Bem-vindo à Fase 1</h2>
+            <p>Nesta fase, você aprenderá a mover o personagem utilizando os seguintes comandos:</p>
+            <ul>
+                <li><b>moveForward()</b> - Move o personagem para cima.</li>
+                <li><b>moveDown()</b> - Move o personagem para baixo.</li>
+                <li><b>moveLeft()</b> - Move o personagem para a esquerda.</li>
+                <li><b>moveRight()</b> - Move o personagem para a direita.</li>
+            </ul>
+            <button id="start-button">Começar</button>
+        </div>
+    </div>
+    
+    <!-- Container principal -->
+    <div id="container">
+        <!-- Lado esquerdo (botões e informações) -->
+        <div id="left-side">
+            <div id="info">
+                <div id="min-movements">Movimentos Mínimos: -</div>
+                <div id="current-command">Comando Atual: -</div>
+                <div id="score">Nota: -</div>
+            </div>
+            <br>
+            <div id="button-container">
+                <!-- Botões de movimentação estilo controle de videogame -->
+                <div id="movement-buttons">
+                    <button onclick="addCommand('up')" id="move-up">moverCima()</button>
+                    <div class="horizontal-buttons">
+                        <button onclick="addCommand('left')" id="move-left">moverEsquerda</button>
+                        <button onclick="executeCommands()" id="execute">Executar Movimentos</button>
+                        <button onclick="addCommand('right')" id="move-right">moverDireita()</button>
+                    </div>
+                    <button onclick="addCommand('down')" id="move-down">moverBaixo</button>
+                </div>
+            </div>
+            <!-- Botão para voltar ao menu -->
+            <button id="back-menu"><a href="index.html">Voltar ao Menu</a></button>
+            <div id="commands"></div>
+        </div>
+
+        <!-- Lado direito (campo de jogo) -->
+        <div id="right-side">
+            <div id="game-area">
+                <img id="ball" src="frente.png" alt="Personagem"> <!-- Posição inicial da bola -->
+                <div id="target" class="target-area"></div> <!-- Área de destino maior -->
             </div>
         </div>
-        
-        <div id="game-area">
-            <img id="ball" src="frente.png" style="left: 135px; top: 135px;"> <!-- Inicializa com a imagem "c.jpg" -->
- <!-- Posição inicial da bola -->
-            <div id="target" class="target-area"></div> <!-- Área de destino maior -->
-        </div>
-        <div id="info">
-            <div id="min-movements">Movimentos Mínimos: -</div>
-            <div id="current-command">Comando Atual: -</div>
-            <div id="score">Nota: -</div>
-        </div>
-        <br>
-        <button onclick="addCommand('up')">Mover para Cima</button>
-        <button onclick="addCommand('left')">Mover para Esquerda</button>
-        <button onclick="addCommand('right')">Mover para Direita</button>
-        <button onclick="addCommand('down')">Mover para Baixo</button>
-        <button onclick="executeCommands()">Executar Movimentos</button>
-        <button><a href="index.html">voltar ao menu</a></button>
-        <div id="commands"></div>
-        <script src="/js/game.js"></script>
-    </body> 
+    </div>
+
     <script src="script1.js"></script>
 </body>
-</html>
-
 </html>

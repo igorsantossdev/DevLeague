@@ -15,7 +15,7 @@ function placeTarget() {
     target.style.top = `${randomY}px`;
 
     // Calcula a menor quantidade de movimentos para chegar ao alvo
-    minMovements = Math.abs((randomX - x) / step) + Math.abs((randomY - y) / step);
+    minMovements = Math.ceil(Math.abs((randomX - x) / step) + Math.abs((randomY - y) / step));
     document.getElementById('min-movements').innerText = `Movimentos Mínimos: ${minMovements}`;
 }
 
@@ -42,19 +42,19 @@ function executeCommands() {
 function move(direction) {
     const ball = document.getElementById('ball');
     switch (direction) {
-        case 'up':
+        case 'moverCima':
             if (y > 0) y -= step;
             ball.src = "costas.png"; // Muda a imagem para "c.jpg" quando move para cima
             break;
-        case 'down':
+        case 'moverBaixo':
             if (y < 270) y += step;
             ball.src = "frente.png"; // Muda a imagem para "b.jpg" quando move para baixo
             break;
-        case 'left':
+        case 'moverEsquerda':
             if (x > 0) x -= step;
             ball.src = "esquerda.png"; // Muda a imagem para "e.jpg" quando move para esquerda
             break;
-        case 'right':
+        case 'moverDireita':
             if (x < 270) x += step;
             ball.src = "direita.png"; // Muda a imagem para "d.jpg" quando move para direita
 

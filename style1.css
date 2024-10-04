@@ -6,7 +6,7 @@
 
 /* Lado esquerdo (botões e informações) */
 #left-side {
-    width: 30%; /* Ajuste conforme necessário */
+    width: 50%; /* Ajuste conforme necessário */
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
@@ -52,7 +52,9 @@
 }
 /* Estilos gerais para o container dos botões */
 #button-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
     justify-content: center;
     align-items: center;
     width: 300px;
@@ -83,7 +85,6 @@
     transform: translateX(-50%);
     width: 100px;
     height: 100px;
-    background-image: url('moverbaixo1.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +99,6 @@
     transform: translateY(-50%);
     width: 100px;
     height: 100px;
-    background-image: url('moveresquerda1.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -113,7 +113,6 @@
     transform: translateY(-50%);
     width: 100px;
     height: 100px;
-    background-image: url('moverdireita1.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,8 +120,21 @@
     cursor: pointer;
 }
 
+#execute {
+    position: absolute;
+    top: 33.3%;
+    left: 33.3%;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+
+}
+
 button {
-    margin-top: 10px;
     padding: 0;
 }
 

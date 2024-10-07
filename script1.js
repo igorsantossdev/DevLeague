@@ -1,4 +1,4 @@
-let x = 250, y = 250; // Posição inicial da bola no centro do espaço de jogo
+let x = 0, y = 0; // Posição inicial da bola no centro do espaço de jogo
 const step = 30; // Quantos pixels cada movimento altera a posição
 let commandList = []; // Lista para armazenar comandos
 let moveCount = 0; // Contador de movimentos

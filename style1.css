@@ -1,13 +1,21 @@
+@font-face {
+    font-family: 'Minecraft'; /* Nome da fonte para usar no site */
+    src: url('../fonts/minecraft.ttf') format('truetype'); /* Caminho para o arquivo TTF */
+    font-weight: normal; /* Ajuste o peso da fonte */
+    font-style: normal;  /* Ajuste o estilo (normal, italic, etc.) */
+}
+
 /* Container principal */
 #container {
     display: flex;
     height: 100vh; /* Altura total da tela */
+    font-family: 'minecraft'
 }
 
 /* Lado esquerdo (botões e informações) */
-#left-side {
-    width: 50%; /* Ajuste conforme necessário */
-    padding: 20px;
+#left-side1, #left-side2 {
+    width: 30%; /* Ajuste conforme necessário */
+    padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
 }
@@ -37,8 +45,6 @@
     height: 16.6667%; /* Mantém proporção */
     border-radius: 50%;
     transition: all 0.2s ease;
-    left: 41.6667%; /* (135px / 300px) * 100% */
-    top: 41.6667%;
     background-size: cover;
 }
 
@@ -57,10 +63,23 @@
     grid-template-rows: 33% 33% 33%;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    height: 450px;
-    margin-top: 20px;
+    width: 260px;
+    height: 260px;
+    margin-top: 10px;
     position: relative;
+}
+
+/* estilos gerais dos botões */
+#move-up, #move-down, #move-left, #move-right, #execute, #back-menu{
+    width: 86px;
+    height: 86px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: rgb(88, 238, 88);
 }
 
 /* Estilos para os botões individuais */
@@ -69,13 +88,6 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
 }
 
 #move-down {
@@ -83,13 +95,6 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
 }
 
 #move-left {
@@ -97,13 +102,6 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
 }
 
 #move-right {
@@ -111,33 +109,17 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
 }
 
 #execute {
     position: absolute;
     top: 33.3%;
     left: 33.3%;
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-
 }
 
 button {
     padding: 0;
 }
-
 
 /* Estilo do link */
 a {

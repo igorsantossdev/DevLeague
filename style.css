@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Minecraft'; /* Nome da fonte para usar no site */
+    src: url('fonte.ttf') format('truetype'); /* Caminho para o arquivo TTF */
+    font-weight: normal; 
+    font-style: normal; 
+}
+  
+  
 /* Estilos gerais para o body */
 body {
     margin: 0;
@@ -7,7 +15,6 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
 }
 
 /* Container principal da aplicação */
@@ -40,6 +47,7 @@ a {
     display: block;
     width: 100%;
     height: 100%;
+    font-family: 'Minecraft';
 }
 
 /* Estilo para os botões de fase */

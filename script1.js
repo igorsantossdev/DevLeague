@@ -91,14 +91,14 @@ function checkWin() {
     ) {
         let score;
         if (moveCount <= minMovements) {
-            score = 10;
+            score = 3;
         } else if (moveCount <= minMovements * 2) {
-            score = 5;
+            score = 2;
         } else {
             score = 1;
         }
         document.getElementById('score').innerText = `Nota: ${score}`;
-        alert(`Você ganhou em ${moveCount} movimentos! Sua nota: ${score}`);
+        alert(`Você ganhou em ${moveCount} movimentos! Estrelas: ${score}`);
         moveCount = 0; // Reseta o contador de movimentos ao atingir o alvo
         placeTarget(); // Reposiciona a área de destino para um novo jogo
     }

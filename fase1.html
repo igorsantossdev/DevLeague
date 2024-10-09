@@ -27,30 +27,34 @@
     <div id="container">
         <!-- Lado esquerdo (botões e informações) -->
         <div id="left-side1">
-            <div id="titulo"><img src="titulo.png" height="50%" width="50%" alt=""></div>
-            <div id="button-container">
-                <!-- Botões de movimentação estilo controle de videogame -->
-                <div id="movement-buttons">
-                    <button onclick="addCommand('moverCima')" id="move-up">moveTop()</button>
-                    <div class="horizontal-buttons">
-                        <button onclick="addCommand('moverEsquerda')" id="move-left">moveLeft()</button>
-                        <button onclick="executeCommands()" id="execute">execute()</button>
-                        <button onclick="addCommand('moverDireita')" id="move-right">moveRight()</button>
+            <div id="container-ls1">
+                <div id="titulo"><img src="titulo.png" height="50%" width="50%" alt=""></div>
+                <div id="button-container">
+                    <!-- Botões de movimentação estilo controle de videogame -->
+                    <div id="movement-buttons">
+                        <button onclick="addCommand('moverCima')" id="move-up">moveTop()</button>
+                        <div class="horizontal-buttons">
+                            <button onclick="addCommand('moverEsquerda')" id="move-left">moveLeft()</button>
+                            <button onclick="executeCommands()" id="execute">execute()</button>
+                            <button onclick="addCommand('moverDireita')" id="move-right">moveRight()</button>
+                        </div>
+                        <button onclick="addCommand('moverBaixo')" id="move-down">moveBottom()</button>
                     </div>
-                    <button onclick="addCommand('moverBaixo')" id="move-down">moveBottom()</button>
                 </div>
+                <!-- Botão para voltar ao menu -->
+                <button id="back-menu"><a href="index.html">VOLTAR AO MENU</a></button>
             </div>
-            <!-- Botão para voltar ao menu -->
-            <button id="back-menu"><a href="index.html">VOLTAR AO MENU</a></button>
         </div>
         
         <div id="left-side2">
-            <div id="info">
-                <div id="min-movements">Movimentos Mínimos: -</div>
-                <div id="current-command">Comando Atual: -</div>
-                <div id="score">Nota: -</div>
+            <div id="container-ls2">
+                <div id="info">
+                    <div id="min-movements">Movimentos Mínimos: -</div>
+                    <div id="current-command">Comando Atual: -</div>
+                    <div id="score">Nota: -</div>
+                </div>
+                <div id="commands"></div>
             </div>
-            <div id="commands"></div>
 
         </div>
 

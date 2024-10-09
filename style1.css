@@ -5,21 +5,36 @@
     font-style: normal; 
 }
 
+body {
+    background-color: blue;
+}
+
 /* Container principal */
 #container {
     display: flex;
     height: 100vh; /* Altura total da tela */
-    font-family: 'minecraft'
+    font-family: 'minecraft';
 }
 
 /* Lado esquerdo (botões e informações) */
 #left-side1, #left-side2 {
-    width: 30%; /* Ajuste conforme necessário */
-    padding: 10px;
+    width: 33%; /* Ajuste conforme necessário */
+    padding: 0;
     box-sizing: border-box;
     overflow-y: auto;
-    border: #36ac00 2px solid;
-    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#container-ls1, #container-ls2 {
+    position: relative;
+    width: 90%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Largura máxima */
+    aspect-ratio: 1 / 1; /* Mantém proporção quadrada */
+    background-color: rgb(82, 194, 53);
+    background-size: 100%;
+    border-radius: 10px;
 }
 
 /* Lado direito (campo de jogo) */
@@ -38,6 +53,7 @@
     aspect-ratio: 1 / 1; /* Mantém proporção quadrada */
     background-image: url(campo.png);
     background-size: 100%;
+    border-radius: 10px ;
 }
 
 /* Bola ajustada proporcionalmente */

@@ -34,7 +34,14 @@ body {
     aspect-ratio: 1 / 1; /* Mantém proporção quadrada */
     background-color: rgb(82, 194, 53);
     background-size: 100%;
-    border-radius: 10px;
+    border-radius: 10px; 
+    padding: 12px;
+}
+
+#container-ls1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 /* Lado direito (campo de jogo) */

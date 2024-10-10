@@ -11,8 +11,7 @@ body {
 
 /* Container principal */
 #container {
-    display: flex;
-    height: 100vh; /* Altura total da tela */
+    display: flex;  
     font-family: 'minecraft';
 }
 
@@ -87,21 +86,20 @@ body {
     grid-template-rows: 33% 33% 33%;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     margin-top: 10px;
     position: relative;
 }
 
 /* estilos gerais dos botões */
 #move-up, #move-down, #move-left, #move-right, #execute, #back-menu{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
-    border-radius: 10%;
     cursor: pointer;
     background-color: rgb(88, 238, 88);
     font-family: 'Minecraft';
@@ -113,6 +111,7 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 10% 10% 0% 0%
 }
 
 #move-down {
@@ -120,6 +119,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 0 0 10% 10%;
 }
 
 #move-left {
@@ -127,6 +127,7 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 10% 0 0 10%;
 }
 
 #move-right {
@@ -134,12 +135,17 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    border-radius: 0 10% 10% 0 ;
 }
 
 #execute {
     position: absolute;
     top: 33.3%;
     left: 33.3%;
+}
+
+#back-menu {
+    border-radius: 10%;
 }
 
 button {

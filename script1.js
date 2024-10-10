@@ -21,7 +21,7 @@ function placeTarget() {
 
 function addCommand(direction) {
     commandList.push(direction);
-    document.getElementById('commands').innerText += direction + "\n"; // Adiciona comando à lista visual
+    document.getElementById('commands').innerText += direction + "()\n"; // Adiciona comando à lista visual
 }
 
 function executeCommands() {

@@ -26,6 +26,14 @@ body {
     display: flex;
 }
 
+/* Lado direito (campo de jogo) */
+#right-side {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #container-ls1, #container-ls2 {
     position: relative;
     width: 90%; /* Ajuste conforme necessário */
@@ -41,14 +49,6 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-}
-
-/* Lado direito (campo de jogo) */
-#right-side {
-    flex-grow: 1; /* Ocupa o espaço restante */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Campo de jogo responsivo */
@@ -237,4 +237,48 @@ a {
 
 #start-button:hover {
     background-color: #45a049;
+}
+
+@media  screen and (max-width: 450px) {
+    /* Container principal */
+#container {
+    flex-direction: column-reverse;
+}
+
+#left-side1, #left-side2 {
+    width: 90%; /* Ajuste conforme necessário */
+    height: 33%;
+    align-self: center;
+}
+
+#titulo {
+    img{
+        height: 60px;
+    }
+}
+
+
+#container-ls1 {
+    width: 80%; /* Ajuste conforme necessário */
+    height: 33%;
+    aspect-ratio: 4/3;
+}
+
+#container-ls2 {
+    width: 80%; /* Ajuste conforme necessário */
+    height: 33%;
+    aspect-ratio: 2/1;
+}
+
+/* Campo de jogo responsivo */
+#game-area {
+    width: 70%; /* Ajuste conforme necessário */
+}
+
+#commands {
+    overflow-y: scroll;
+    max-height: 33%;
+}
+
+
 }

@@ -86,16 +86,16 @@ body {
     grid-template-rows: 33% 33% 33%;
     justify-content: center;
     align-items: center;
-    width: 450px;
-    height: 450px;
+    width: 90%;
+    height: 90%;
     margin-top: 10px;
     position: relative;
 }
 
 /* estilos gerais dos botões */
 #move-up, #move-down, #move-left, #move-right, #execute, #back-menu{
-    width: 150px;
-    height: 150px;
+    width: 35%;
+    height: 35%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@ body {
     cursor: pointer;
     background-color: rgb(152, 255, 152);
     font-family: 'Minecraft';
-    font-size: 1.3rem;
+    font-size: 0.8rem;
 
 }
 

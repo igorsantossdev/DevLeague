@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Minecraft'; /* Nome da fonte para usar no site */
+    src: url('fonte.ttf') format('truetype'); /* Caminho para o arquivo TTF */
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+body {
+    background-image: url(background.png);
+}
+
+/* Container principal */
+#container {
+    display: flex;  
+    font-family: 'minecraft';
+}
+
+/* Lado esquerdo (botões e informações) */
+#left-side1, #left-side2 {
+    width: 33%; /* Ajuste conforme necessário */
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Lado direito (campo de jogo) */
+#right-side {
+    flex-grow: 1; /* Ocupa o espaço restante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-ls1, #container-ls2 {
+    position: relative;
+    width: 90%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Largura máxima */
+    aspect-ratio: 1 / 1; /* Mantém proporção quadrada */
+    background-color: rgb(74, 177, 48);
+    background-size: 100%;
+    border-radius: 10px; 
+    padding: 12px;
+}
+
+#container-ls1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Campo de jogo responsivo */
+#game-area {
+    position: relative;
+    width: 90%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Largura máxima */
+    aspect-ratio: 1 / 1; /* Mantém proporção quadrada */
+    background-image: url(campo.png);
+    background-size: 100%;
+    border-radius: 10px ;
+}
+
+/* Centraliza a bola no meio do campo */
+#player {
+    position: absolute;
+    height: 16.6667%; /* Mantém proporção */
+    top: 50%; /* Posiciona verticalmente no meio do campo */
+    left: 50%; /* Posiciona horizontalmente no meio do campo */
+    transform: translate(-50%, -50%); /* Centraliza em ambas direções */
+    transition: all 0.2s ease;
+    background-size: cover;
+    padding: 5px;
+    z-index: 2;
+}
+
+/* Bola pequena ajustada proporcionalmente */
+#ball {
+    position: absolute;
+    width: 4.1667%; /* Ajuste proporcional à bola principal */
+    height: 4.1667%; /* 1/4 da altura do jogador (16.6667% / 4) */
+    background-color: blue; /* Cor da bola */
+    border-radius: 50%; /* Forma de círculo */
+    top: 50%; /* Posiciona verticalmente no meio do campo */
+    left: 50%; /* Posiciona horizontalmente no meio do campo */
+    transform: translate(-50%, -50%); /* Centraliza em ambas as direções */
+    z-index: 1;
+    transition: 0.5s;
+}
+
+/* Goleiro ajustado */
+.goalkeeper {
+    position: absolute;
+    width: 8%; /* Ajuste conforme o tamanho desejado */
+    height: 8%; /* Altura igual à largura para ser uma bola */
+    background-color: black; /* Cor do goleiro */
+    border-radius: 50%; /* Forma de círculo */
+    top: calc(0% + 10%); /* Ajuste a posição vertical conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza em ambas as direções */
+    transition: 0.5s;
+}
+
+
+/* Trave ajustada para o topo central do campo */
+.goal-area {
+    position: absolute;
+    width: 40%; /* Ajuste conforme o tamanho da trave desejado */
+    height: 20%; /* Altura da trave */
+    border-top: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255); /* Borda da trave */
+    top: 0; /* Posiciona na parte superior do campo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+}
+
+/* Estilos gerais para o container dos botões */
+#button-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* estilos gerais dos botões */
+#movex1, #movex-1, #movey-1, #movey1, #execute {
+    width: 35%;
+    height: 35%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(152, 255, 152);
+    font-family: 'Minecraft';
+    font-size: 0.8rem;
+
+}
+
+/* Estilos para os botões individuais */
+#movex1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10% 10% 0% 0%
+}
+
+#movex-1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10% 10%;
+}
+
+#movey-1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10% 0 0 10%;
+}
+
+#movey1 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 10% 10% 0 ;
+}
+
+#execute {
+    position: absolute;
+    top: 33.3%;
+    left: 33.3%;
+}
+
+button {
+    padding: 0;
+}
+
+/* Estilo do link */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Comandos */
+#commands {
+    margin-top: 10px;
+}
+
+/* Informações */
+#info {
+    font-family:'Minecraft';
+    font-size: 1.7rem;
+}
+
+/* Estilo do modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+    transform: scale(0.9);
+    font-family: 'Minecraft';
+}
+
+.modal-content h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content li {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Estilo do botão de início */
+#start-button {
+    padding: 10px 20px;
+    font-size: 1.9em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Minecraft';
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+@media  screen and (max-width: 450px) {
+    /* Container principal */
+#container {
+    flex-direction: column-reverse;
+}
+
+#left-side1, #left-side2 {
+    width: 90%; /* Ajuste conforme necessário */
+    height: 33%;
+    align-self: center;
+}
+
+#container-ls1 {
+    width: 80%; /* Ajuste conforme necessário */
+    height: 33%;
+    aspect-ratio: 4/3;
+}
+
+#container-ls2 {
+    width: 80%; /* Ajuste conforme necessário */
+    height: 33%;
+    aspect-ratio: 2/1;
+}
+
+/* Campo de jogo responsivo */
+#game-area {
+    width: 70%; /* Ajuste conforme necessário */
+}
+
+#commands {
+    overflow-y: scroll;
+    max-height: 33%;
+}
+}

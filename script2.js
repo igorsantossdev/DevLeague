@@ -33,6 +33,8 @@ function moveGoalkeeper() {
     const goalkeeper = document.getElementById('goalkeeper');
     goalkeeper.style.top = newPosition.top;
     goalkeeper.style.left = newPosition.left;
+
+
 }
 
 function executeCommands() {
